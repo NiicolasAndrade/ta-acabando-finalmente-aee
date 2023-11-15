@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Sua Empresa</title>
+    <link rel="stylesheet" href="cursos/css curso/estilodoscuros.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        /* Adicione seu CSS personalizado aqui, se necessário */
+        /* ... (o mesmo CSS fornecido anteriormente) ... */
+        
+        .card-curso {
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            display: block;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card-curso:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-curso-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-curso__icone {
+            max-width: 30%;
+            height: auto;
+        }
+
+        .card-curso__info {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .card-curso__nome {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-curso__carga {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card-curso__label {
+            color: #333;
+        }
+
+        /* Adicione o estilo do navbar aqui */
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .subtopicos {
+            display: none;
+            position: absolute;
+            background-color: #212121;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .cursos:hover .subtopicos {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" style="background-color: #212121;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="cursos/fotos curso/logo.png" alt="Logo" width="300">
+            </div>
+            <!-- Barra de navegação -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li id="cursosNavItem" class="cursos">
+                        <a href="Cursos.html" class="nav-link">Cursos</a>
+                        <ul class="subtopicos">
+                            <li>Introdução à finanças</li>
+                            <li>Dicas para orçamento</li>
+                            <li>Como lidar com dívidas</li>
+                            <li>Como economizar dinheiro</li>
+                            <li>Como investir</li>
+                            <li>Como criar um plano financeiro</li>
+                        </ul>
+                    </li>
+                    <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+                    <li><a href="#precos" class="nav-link">Preços</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Fim da barra de navegação -->
+        </div>
+    </header>
+
+    <main>
+        <section class="cursos">
+            <div class="container">
+                <h1>Nossos Cursos Disponíveis</h1>
+                <!-- Curso: Introdução à Finanças -->
+                <a href="introducao-financas.html" class="card-curso">
+                    <div class="card-curso-wrapper">
+                        <img class="card-curso__icone" src="https://www.alura.com.br/assets/api/cursos/kotlin-exceptions-null-safety.svg" aria-hidden="false" alt="">
+                        <div class="card-curso__info">
+                            <span class="card-curso__nome">Introdução à Finanças</span>
+                            <p><strong>Objetivo:</strong> Introduzir o conceito básico de finanças.</p>
+                            <p><strong>Formato:</strong> Online, com matérias de estudo acessíveis a qualquer momento.</p>
+                            <p><strong>Duração do curso:</strong> 8 semanas</p>
+                            <p><strong>Nível:</strong> Iniciante</p>
+                            <p><strong>Público-alvo:</strong> A partir de 20 anos</p>
+                        </div>
+                    </div>
+                    <span class="card-curso__carga">
+                        <span class="card-curso__label">Duração:</span>
+                        8 semanas
+                    </span>
+                </a>
+                <!-- Curso: Como Lidar com Dívidas -->
+                <a href="lidar-dividas.html" class="card-curso">
+                    <div class="card-curso-wrapper">
+                        <img class="card-curso__icone" src="https://www.alura.com.br/assets/api/cursos/kotlin-recursos-da-linguagem-com-pacotes-e-composicao.svg" aria-hidden="false" alt="">
+                        <div class="card-curso__info">
+                            <span class="card-curso__nome">Como Lidar com Dívidas</span>
+                            <p><strong>Objetivo:</strong> Ensinar de maneira simples como lidar com dívidas criando planos de orçamento.</p>
+                            <p><strong>Formato:</strong> Online, com matérias de estudo acessíveis a qualquer momento.</p>
+                            <p><strong>Duração do curso:</strong> 7 semanas</p>
+                            <p><strong>Nível:</strong> Iniciante</p>
+                            <p><strong>Público-alvo:</strong> A partir de 18 anos</p>
+                        </div>
+                    </div>
+                    <span class="card-curso__carga">
+                        <span class="card-curso__label">Duração:</span>
+                        7 semanas
+                    </span>
+                </a>
+                <!-- ... (outros cursos fornecidos anteriormente) ... -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        /* Adicione seus scripts aqui, se necessário */
+        document.addEventListener("DOMContentLoaded", function () {
+            const saibaMaisLinks = document.querySelectorAll(".curso a");
+
+            saibaMaisLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    // Eventualmente, você pode redirecionar o usuário para a página do curso em vez de exibir um alerta
+                    event.preventDefault();
+                    alert("Você clicou em 'Saiba mais'. Implemente a ação desejada aqui.");
+                });
+            });
+
+            var cursosNavItem = document.getElementById("cursosNavItem");
+            var subtopicos = cursosNavItem.querySelector(".subtopicos");
+
+            cursosNavItem.addEventListener("click", function () {
+                subtopicos.style.display = "block";
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!cursosNavItem.contains(event.target)) {
+                    subtopicos.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
